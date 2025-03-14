@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>90s Rock Bands</title>
+
+	<!--Fuentes-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=New+Rocker&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+	
+	<!--CSS-->
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/general.css">
+	<link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<!--NOTAS
+- El responsive no está completamente hecho en algunas partes. Si no, no me daba tiempo a acabarlo
+-->
+<body class="dark-mode">
+	<main>
+
+		<!--HEADER__________________________________________________________-->
+		<header class="index-header flex-center blured-bottom blured-to-bottom">
+			<div class="flex-center general-width">
+				<p class="logo h-font">Rock Legends</p>
+
+				<!--FONT WEIGHT LABEL-->
+				<div id="fntWeightRange" class="p-font flex-center">
+					<label for="fntWeight">Grosor texto:</label>
+					<input type="range" id="fntWeight" name="fntWeight" min="100" max="800" value="300"/>
+				  </div>
+
+				<!--COLOR CHANGER RADIO BUTTONS-->
+				<fieldset id="imgColorChanger" class="p-font flex-center">
+					<title>Cambiador de color</title>
+					<label for="fntWeight">Color:</label>
+					<input type="radio" id="red" name="imgColorChangerRadio" value="#ea1707" checked/>
+					<input type="radio" id="blue" name="imgColorChangerRadio" value="#0388c3"/>
+					<input type="radio" id="yellow" name="imgColorChangerRadio" value="#af6d00"/>
+					<input type="radio" id="green" name="imgColorChangerRadio" value="#00a46a"/>
+				</fieldset>
+
+				<!--DARK MODE CHECKBOX-->
+				<div class="dark-mode-btn flex-center">
+					<input type="checkbox" id="colorModeBtn">
+				</div>
+
+			</div>
+		</header>
+
+		<!--SCRATCH PATTERN-->
+		<div class="scratch_pattern"></div>
+
+		
+		<!--HERO__________________________________________________________-->
+		<section class="hero clr-changer blured-bottom blured-from-bottom">
+			<h1 class="h-font light-clr">Welcome to 90s Rock Legends</h1>
+			<p class="p-font l-fnt-size light-clr">Exploring the greatest rock bands and guitarists of the 1990s.</p>
+			<img class="hero-img" src="./assets/img/rock-header.jpg" alt="Manos arriba en un concierto">
+		</section>
+		
+		<!--GUITARRISTAS__________________________________________________________-->
+		<section class="section flex-center flex-column">
+			<h2 class="h-font h-fnt-size general-width txt-center">Top Guitarists of the 90s</h2>
+			
+			<ul class="guitarrists-wrapper p-font general-width light-clr">
+				<!--KURT-->
+				<li class="guitarrist flex-center clr-changer">
+						<p>1.</p>
+						<p>Kurt Cobain</p>
+						<p>Nirvana</p>
+						<img src="/assets/img/guitarristas/kurt.jpg" alt="Kurt">
+				</li>
+				<!--SLASH-->
+				<li class="guitarrist flex-center clr-changer">
+					<p>2.</p>
+					<p>Slash</p>
+					<p>Guns N' Roses</p>
+					<img src="/assets/img/guitarristas/slash.jpg" alt="Slash">
+				</li>
+				<!--KIM THAYIL-->
+				<li class="guitarrist flex-center clr-changer">
+					<p>3.</p>
+					<p>Kim Thayil</p>
+					<p>Soundgarden</p>
+					<img src="/assets/img/guitarristas/KimThayil.jpg" alt="Kim Thayil">
+				</li>
+				<!--JERRY CANTELL-->
+				<li class="guitarrist flex-center clr-changer">
+					<p>4.</p>
+					<p>Jerry Cantrell</p>
+					<p>Alice in Chains</p>
+					<img src="/assets/img/guitarristas/jerryCantrell.jpg" alt="Kim Thayil">
+				</li>
+			</ul>
+		  </section>
+		
+		<!--ABOUT DIO__________________________________________________________-->  
+		<section class="section dio-section flex-center flex-column">
+			<div class="dio-info-wrapper general-width">
+				<h2 class="h-font h-fnt-size">About Ronnie James Dio</h2>
+				<p class="p-font">Though primarily known for his work in the 80s, Ronnie James Dio's influence persisted throughout the 90s with his powerful vocals and thematic music that continued to inspire rock musicians and fans alike.</p>
+			</div>
+			<img class="dio-img" src="./assets/img/dio.png" alt="Dio">
+		</section>
+		
+		<!--VAN HALEN__________________________________________________________-->
+		<section class="section final-section flex-center">
+			<div class="final-secction-wrapper flex-center general-width txt-center">
+				<div class="column">
+					<h3 class="h-font">Van Halen in the 90s</h3>
+					<p class="p-font">Van Halen continued to impact the rock scene in the 90s with albums like "For Unlawful Carnal Knowledge" which brought a new energy to their music and live performances.</p>
+				</div>
+				<div class="column">
+					<h3 class="h-font">Queen's Legacy</h3>
+					<p class="p-font">The 90s saw Queen navigating the loss of Freddie Mercury, with their music reaching new audiences and continuing to influence the world of rock.</p>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="p-font flex-center">
+		<div class="general-width">
+			<p>Grosor texto: <span id="infoGrosorTexto"></span></p>
+			<p>Color: <span id="infoColor"></span></p>
+			<p>Modo: <span id="darkMode"></span></p>
+		</div>
+	</footer>
+
+	<script src="./js/script.js"></script>
+	
+</body>
+</html>

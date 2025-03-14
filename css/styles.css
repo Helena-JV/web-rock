@@ -1,0 +1,226 @@
+/*--------HEADER-----------*/
+.index-header {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: fixed;
+    z-index: 900;
+
+
+    > div {
+        justify-content: space-between;
+        overflow: hidden;
+        flex-wrap: wrap;
+
+        .logo {
+            font-size: clamp(20px, 2vw, 30px);
+        }
+
+        /*INPUTS*/
+        input {
+            appearance: none;
+            cursor: pointer;
+            outline: none;
+        }
+
+        #fntWeightRange, #imgColorChanger {
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        /* RANGO TAMAÑO DEL TEXTO */
+            #fntWeightRange input {
+                border-radius: 15px;
+                height: 5px;
+            }
+
+            #fntWeightRange input::-webkit-slider-runnable-track {
+                height: 15px;
+                border-radius: 16px;
+            }
+            #fntWeightRange input::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none; 
+                height: 15px;
+                width: 15px;
+                background-color: var(--accent-clr);
+                border-radius: 50%;
+                border: none;
+                transition: .2s ease-in-out;
+            }
+        /*- - - - - - - - - */
+
+        /* SELECTOR DE COLOR */
+
+            #imgColorChanger input {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: red;
+                position: relative;
+            }
+
+            #imgColorChanger input:checked::after {
+                content: url('/assets/img/icons/tic.svg');
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                top: 11%;
+                left: 9%;
+            }
+
+            #imgColorChanger input:not(:checked)::after {
+                content: none; /* No muestra el círculo blanco cuando no está seleccionado */
+              }
+        /*- - - - - - - - - */
+
+        /* DARK MODE BUTTON */
+            .dark-mode-btn {
+                width: 50px;
+                height: 30px;
+                border-radius: 30px;
+                position: relative;
+
+                input[type="checkbox"] {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 100%;
+                    position: absolute;
+                    left: 2px;
+                    right: auto;
+                    transition: all 0.3s ease-in-out;
+                }
+                input[type="checkbox"]:checked {
+                    left: 19px;
+                }  
+            }
+        /*- - - - - - - - - */
+
+    }
+}
+
+/*----SCRATCH PATTERN-------*/
+.scratch_pattern {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: repeat;
+    background-size: 600px;
+    opacity: 0.2;
+    position: fixed;
+    z-index: -1;
+    pointer-events: none;
+    background-image: var(--scratch_pattern);
+}
+
+
+/*---------HERO-------------*/
+.hero {
+    width: 100%;
+    height: 100svh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: -2;
+
+    h1 {
+        font-size: clamp(3rem, 10vw, 10rem);
+        padding-bottom: 7vw;
+    }
+
+    p {
+        font-size: clamp(1rem, 4vw, 2rem) ;
+    }
+}
+
+/*---------GUITARRISTAS------------*/
+
+.guitarrists-wrapper {
+    display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: stretch;
+  justify-content: center;
+  padding-top: 60px;
+  }
+  
+  .guitarrist {
+    height: 50svh;
+    flex: 1;
+    min-width: 273px;
+    max-width: 500px;
+    text-align: center;
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.365));
+
+    border-radius: 20px;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+
+    p:nth-child(2) {
+        font-size: 30px;
+    }
+    p {
+        filter: drop-shadow(0 0 0.15rem black);
+    }
+  }
+
+
+/*---------DIO SECTION------------*/
+.dio-section{
+    padding: 200px 0;
+    background-color: var(--accent-clr);
+    position: relative;
+    z-index: -2;
+    color: var(--light-clr);
+    overflow: hidden;
+
+    .dio-info-wrapper {
+        padding-right: 30%;
+        p{
+            padding-top: 60px;
+        }
+        min-width: 300px;
+    }
+
+    .dio-img {
+        position: absolute;
+        width: 55%;
+        bottom: 0;
+        right: -10%;
+    }
+}
+
+/*----------FINAL SECTION------------*/
+
+.final-section {
+    .final-secction-wrapper{
+        flex-wrap: wrap;
+        gap: 5vw;
+        .column {
+            flex: 1;
+            min-width: 200px;
+            h3 {
+                font-size: clamp(30px, 4vw, 100px);
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+
+/*----------- FOOTER -----------*/
+
+footer {
+    height: 50px;
+    width: 100%;
+    
+    > div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+

@@ -57,9 +57,9 @@ DARK_MODE_BTN.addEventListener('click', function(){
 */
 window.addEventListener('scroll', function(){
     if (Math.floor(window.scrollY / 100) % 2 === 0) {
-        ROOT.style.setProperty('--scratch_pattern', 'url(/assets/img/scratch_pattern/scratch_1.jpg)');
+        ROOT.style.setProperty('--scratch_pattern', 'url(/assets/img/scratch_pattern/scratch_1.webp)');
     } else {
-        ROOT.style.setProperty('--scratch_pattern', 'url(/assets/img/scratch_pattern/scratch_2.jpg)');
+        ROOT.style.setProperty('--scratch_pattern', 'url(/assets/img/scratch_pattern/scratch_2.webp)');
     }
 });
 

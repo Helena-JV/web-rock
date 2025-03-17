@@ -55,13 +55,17 @@ DARK_MODE_BTN.addEventListener('click', function(){
     El problema era que me salía el decimal .5 muchas veces, y, por eso, se me seteaba siempre el else por lo que he buscado en internet y he encontrado que hay una manera de redondearlo con Math.floor(),
     Después ví que iba demasiado rápido, así que hice el (window.scrollY / 100), para que tomase más pixels
 */
-window.addEventListener('scroll', function(){
+window.addEventListener('scroll', function() {
+    // Obtener la ruta base del sitio (soporta GitHub Pages)
+    const basePath = window.location.pathname.includes('/repositorio/') ? '/repositorio' : '';
+
     if (Math.floor(window.scrollY / 100) % 2 === 0) {
-        ROOT.style.setProperty('--scratch_pattern', 'url(/assets/img/scratch_pattern/scratch_1.webp)');
+        ROOT.style.setProperty('--scratch_pattern', `url(${basePath}/assets/img/scratch_pattern/scratch_1.webp)`);
     } else {
-        ROOT.style.setProperty('--scratch_pattern', 'url(/assets/img/scratch_pattern/scratch_2.webp)');
+        ROOT.style.setProperty('--scratch_pattern', `url(${basePath}/assets/img/scratch_pattern/scratch_2.webp)`);
     }
 });
+
 
 // BUILD INFO FOOTER ------------------------------------------------
 /*
